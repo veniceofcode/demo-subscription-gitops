@@ -4,7 +4,7 @@ namespace: hello
 # micro-service specific values inside each service subsection.
 hello:
   image: 
-    name: a5hut0sh/helloworld
+    name: helloworld
     tag: '1.0'
     pullpolicy: IfNotPresent
   container:
