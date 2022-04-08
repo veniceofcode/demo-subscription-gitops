@@ -1,11 +1,31 @@
-kubernetes:
-  host: https://kubernetes.default
+# common values at global level. 
+namespace: hello
 
-helloworld:
-  namespace: default
-  image:
-    name: tutum/hello-world
-    tag: latest
-    pullPolicy: IfNotPresent
+# micro-service specific values inside each service subsection.
+hello:
+  image: 
+    name: a5hut0sh/helloworld
+    tag: '1.0'
+    pullpolicy: IfNotPresent
+  container:
+    port: 8080
+    protocol: TCP
+  resources:
+    limits:
+      cpu: 200m
+      memory: 256Mi
+    requests:
+      cpu: 100m
+      memory: 128Mi
+  replicas: 3
   service:
-    ingressClass: internal-ingress
+    type: ClusterIP
+    port: 80
+  ingress:
+    enabled: true
+    annotations: 
+      kubernetes.io/ingress.class: nginx
+      nginx.ingress.kubernetes.io/rewrite-target: /
+    path: helloworld
+    hosts:
+      - kubelb.company.com
