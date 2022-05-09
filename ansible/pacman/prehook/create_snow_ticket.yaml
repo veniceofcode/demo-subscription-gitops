@@ -3,11 +3,11 @@ apiVersion: tower.ansible.com/v1alpha1
 kind: AnsibleJob
 metadata:
   name: create-service-now-change
-  namespace: demo
+  namespace: acm-pacman-demo
 spec:
   tower_auth_secret: aaptower
   job_template_name: Demo Job Template
   extra_vars:
     sn_severity: 3
     sn_priority: 3
-    appName: pacman
+    appName: acm-pacman-demo
