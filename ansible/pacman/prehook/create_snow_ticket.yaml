@@ -3,7 +3,7 @@ apiVersion: tower.ansible.com/v1alpha1
 kind: AnsibleJob
 metadata:
   name: service-now-nginx-demo
-  namespace: acm-pacman-demo
+  namespace: demo
 spec:
   tower_auth_secret: testbsu
   job_template_name: Demo Job Template
