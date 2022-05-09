@@ -2,7 +2,7 @@
 apiVersion: tower.ansible.com/v1alpha1
 kind: AnsibleJob
 metadata:
-  name: create-snow-change
+  name: create-service-now-change
   namespace: demo
 spec:
   tower_auth_secret: aaptower
