@@ -2,7 +2,7 @@
 apiVersion: tower.ansible.com/v1alpha1
 kind: AnsibleJob
 metadata:
-  name: service-now-nginx-demo
+  name: create-snow-change
   namespace: demo
 spec:
   tower_auth_secret: testbsu
@@ -10,4 +10,4 @@ spec:
   extra_vars:
     sn_severity: 3
     sn_priority: 3
-    appName: pacman-ansible-demonstration
+    appName: acm-pacman-demo
