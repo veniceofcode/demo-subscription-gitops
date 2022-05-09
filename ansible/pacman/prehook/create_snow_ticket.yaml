@@ -5,7 +5,7 @@ metadata:
   name: create-snow-change
   namespace: demo
 spec:
-  tower_auth_secret: testbsu
+  tower_auth_secret: aaptower
   job_template_name: Demo Job Template
   extra_vars:
     sn_severity: 3
