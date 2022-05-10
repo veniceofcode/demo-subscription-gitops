@@ -2,7 +2,7 @@
 apiVersion: tower.ansible.com/v1alpha1
 kind: AnsibleJob
 metadata:
-  name: create-service-now-change
+  name: snow
   namespace: pacman
 spec:
   tower_auth_secret: aaptower
